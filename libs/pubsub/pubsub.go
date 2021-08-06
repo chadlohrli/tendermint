@@ -39,10 +39,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/abci/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/libs/pubsub/query"
+	"github.com/providenetwork/tendermint/libs/service"
 )
 
 type operation int

@@ -14,13 +14,13 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/light"
-	"github.com/tendermint/tendermint/light/provider"
-	provider_mocks "github.com/tendermint/tendermint/light/provider/mocks"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/internal/test/factory"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/light"
+	"github.com/providenetwork/tendermint/light/provider"
+	provider_mocks "github.com/providenetwork/tendermint/light/provider/mocks"
+	dbs "github.com/providenetwork/tendermint/light/store/db"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (

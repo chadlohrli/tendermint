@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"io"
 
-	abcicli "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
+	abcicli "github.com/providenetwork/tendermint/abci/client"
+	"github.com/providenetwork/tendermint/abci/example/kvstore"
+	"github.com/providenetwork/tendermint/abci/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
 )
 
 //go:generate ../scripts/mockery_generate.sh ClientCreator

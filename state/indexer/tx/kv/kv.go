@@ -11,10 +11,10 @@ import (
 	"github.com/google/orderedcode"
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	indexer "github.com/tendermint/tendermint/state/indexer"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/libs/pubsub/query"
+	indexer "github.com/providenetwork/tendermint/state/indexer"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var _ indexer.TxIndexer = (*TxIndex)(nil)

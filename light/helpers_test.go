@@ -4,14 +4,14 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/mock"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	provider_mocks "github.com/tendermint/tendermint/light/provider/mocks"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/providenetwork/tendermint/crypto"
+	"github.com/providenetwork/tendermint/crypto/ed25519"
+	"github.com/providenetwork/tendermint/crypto/tmhash"
+	tmtime "github.com/providenetwork/tendermint/libs/time"
+	provider_mocks "github.com/providenetwork/tendermint/light/provider/mocks"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
+	"github.com/providenetwork/tendermint/version"
 )
 
 // privKeys is a helper type for testing.

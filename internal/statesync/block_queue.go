@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 type lightBlockResponse struct {

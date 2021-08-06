@@ -3,8 +3,8 @@ package pex
 import (
 	"time"
 
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // knownAddress tracks information about a known network address

@@ -6,7 +6,7 @@ import (
 	"math/rand"
 	"sort"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 func RandValidator(randPower bool, minPower int64) (*types.Validator, types.PrivValidator) {

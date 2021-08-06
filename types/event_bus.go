@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmpubsub "github.com/providenetwork/tendermint/libs/pubsub"
+	"github.com/providenetwork/tendermint/libs/service"
 )
 
 const defaultCapacity = 0

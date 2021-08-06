@@ -7,16 +7,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/libs/clist"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	pubmempool "github.com/tendermint/tendermint/pkg/mempool"
-	"github.com/tendermint/tendermint/proxy"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/internal/libs/clist"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/internal/mempool"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmmath "github.com/providenetwork/tendermint/libs/math"
+	pubmempool "github.com/providenetwork/tendermint/pkg/mempool"
+	"github.com/providenetwork/tendermint/proxy"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var _ mempool.Mempool = (*TxMempool)(nil)

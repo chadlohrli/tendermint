@@ -7,11 +7,11 @@ import (
 	"runtime/debug"
 	"time"
 
-	tmconn "github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/libs/cmap"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/types"
+	tmconn "github.com/providenetwork/tendermint/internal/p2p/conn"
+	"github.com/providenetwork/tendermint/libs/cmap"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/types"
 )
 
 //go:generate ../../scripts/mockery_generate.sh Peer

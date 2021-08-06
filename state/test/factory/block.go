@@ -3,9 +3,9 @@ package factory
 import (
 	"time"
 
-	"github.com/tendermint/tendermint/internal/test/factory"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/internal/test/factory"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/types"
 )
 
 func MakeBlocks(n int, state *sm.State, privVal types.PrivValidator) []*types.Block {

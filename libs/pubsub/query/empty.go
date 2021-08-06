@@ -1,7 +1,7 @@
 package query
 
 import (
-	"github.com/tendermint/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/abci/types"
 )
 
 // Empty query matches any set of events.

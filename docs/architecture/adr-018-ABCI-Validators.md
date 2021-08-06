@@ -94,7 +94,7 @@ Implemented
 
 ## References
 
-- [Latest ABCI Spec](https://github.com/tendermint/tendermint/blob/v0.22.8/docs/app-dev/abci-spec.md)
-- [ADR-009](https://github.com/tendermint/tendermint/blob/v0.22.8/docs/architecture/adr-009-ABCI-design.md)
+- [Latest ABCI Spec](https://github.com/providenetwork/tendermint/blob/v0.22.8/docs/app-dev/abci-spec.md)
+- [ADR-009](https://github.com/providenetwork/tendermint/blob/v0.22.8/docs/architecture/adr-009-ABCI-design.md)
 - [Issue #1712 - Don't send PubKey in
-  RequestBeginBlock](https://github.com/tendermint/tendermint/issues/1712)
+  RequestBeginBlock](https://github.com/providenetwork/tendermint/issues/1712)

@@ -9,10 +9,10 @@ import (
 	"regexp"
 	"strings"
 
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	types "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	tmjson "github.com/providenetwork/tendermint/libs/json"
+	"github.com/providenetwork/tendermint/libs/log"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	types "github.com/providenetwork/tendermint/rpc/jsonrpc/types"
 )
 
 // HTTP + URI handler

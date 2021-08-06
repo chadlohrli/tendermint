@@ -7,20 +7,20 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	cons "github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/mempool/mock"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/p2ptest"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	sf "github.com/tendermint/tendermint/state/test/factory"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	cfg "github.com/providenetwork/tendermint/config"
+	cons "github.com/providenetwork/tendermint/internal/consensus"
+	"github.com/providenetwork/tendermint/internal/mempool/mock"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/p2p/p2ptest"
+	"github.com/providenetwork/tendermint/internal/test/factory"
+	"github.com/providenetwork/tendermint/libs/log"
+	bcproto "github.com/providenetwork/tendermint/proto/tendermint/blocksync"
+	"github.com/providenetwork/tendermint/proxy"
+	sm "github.com/providenetwork/tendermint/state"
+	sf "github.com/providenetwork/tendermint/state/test/factory"
+	"github.com/providenetwork/tendermint/store"
+	"github.com/providenetwork/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 )
 
@@ -283,7 +283,7 @@ func TestReactor_NoBlockResponse(t *testing.T) {
 func TestReactor_BadBlockStopsPeer(t *testing.T) {
 	// Ultimately, this should be refactored to be less integration test oriented
 	// and more unit test oriented by simply testing channel sends and receives.
-	// See: https://github.com/tendermint/tendermint/issues/6005
+	// See: https://github.com/providenetwork/tendermint/issues/6005
 	t.SkipNow()
 
 	config := cfg.ResetTestRoot("blockchain_reactor_test")
@@ -323,7 +323,7 @@ func TestReactor_BadBlockStopsPeer(t *testing.T) {
 	// from this peer.
 	//
 	// XXX: This causes a potential race condition.
-	// See: https://github.com/tendermint/tendermint/issues/6005
+	// See: https://github.com/providenetwork/tendermint/issues/6005
 	otherGenDoc, otherPrivVals := factory.RandGenesisDoc(config, 1, false, 30)
 	newNode := rts.network.MakeNode(t, p2ptest.NodeOptions{
 		MaxPeers:     uint16(len(rts.nodes) + 1),

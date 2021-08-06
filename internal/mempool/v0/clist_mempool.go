@@ -7,16 +7,16 @@ import (
 	"sync"
 	"sync/atomic"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/libs/clist"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	pubmempool "github.com/tendermint/tendermint/pkg/mempool"
-	"github.com/tendermint/tendermint/proxy"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	cfg "github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/internal/libs/clist"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/internal/mempool"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmmath "github.com/providenetwork/tendermint/libs/math"
+	pubmempool "github.com/providenetwork/tendermint/pkg/mempool"
+	"github.com/providenetwork/tendermint/proxy"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // CListMempool is an ordered in-memory pool for transactions before they are
@@ -598,7 +598,7 @@ func (mem *CListMempool) Update(
 		//   101 -> 102
 		// Mempool after:
 		//   100
-		// https://github.com/tendermint/tendermint/issues/3322.
+		// https://github.com/providenetwork/tendermint/issues/3322.
 		if e, ok := mem.txsMap.Load(mempool.TxKey(tx)); ok {
 			mem.removeTx(tx, e.(*clist.CElement), false)
 		}

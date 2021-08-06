@@ -7,9 +7,9 @@ import (
 	"fmt"
 	mrand "math/rand"
 
-	abcicli "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/types"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
+	abcicli "github.com/providenetwork/tendermint/abci/client"
+	"github.com/providenetwork/tendermint/abci/types"
+	tmrand "github.com/providenetwork/tendermint/libs/rand"
 )
 
 var ctx = context.Background()

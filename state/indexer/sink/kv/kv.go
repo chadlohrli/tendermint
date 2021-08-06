@@ -3,12 +3,12 @@ package kv
 import (
 	"context"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/state/indexer"
-	kvb "github.com/tendermint/tendermint/state/indexer/block/kv"
-	kvt "github.com/tendermint/tendermint/state/indexer/tx/kv"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/libs/pubsub/query"
+	"github.com/providenetwork/tendermint/state/indexer"
+	kvb "github.com/providenetwork/tendermint/state/indexer/block/kv"
+	kvt "github.com/providenetwork/tendermint/state/indexer/tx/kv"
+	"github.com/providenetwork/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 )
 

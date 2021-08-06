@@ -7,11 +7,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/light/provider"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	proto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/light/provider"
+	ssproto "github.com/providenetwork/tendermint/proto/tendermint/statesync"
+	proto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var (

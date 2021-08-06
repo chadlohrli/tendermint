@@ -4,8 +4,8 @@ import (
 	"sync"
 	"testing"
 
-	bh "github.com/tendermint/tendermint/internal/blocksync/v2/internal/behavior"
-	"github.com/tendermint/tendermint/types"
+	bh "github.com/providenetwork/tendermint/internal/blocksync/v2/internal/behavior"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // TestMockReporter tests the MockReporter's ability to store reported

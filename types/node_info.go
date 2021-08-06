@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tendermint/tendermint/libs/bytes"
-	tmstrings "github.com/tendermint/tendermint/libs/strings"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	"github.com/providenetwork/tendermint/libs/bytes"
+	tmstrings "github.com/providenetwork/tendermint/libs/strings"
+	tmp2p "github.com/providenetwork/tendermint/proto/tendermint/p2p"
 )
 
 const (

@@ -81,5 +81,5 @@ Implemented
 
 ## References
 
-- Issue [#2237](https://github.com/tendermint/tendermint/issues/2237) : Tendermint "mode"
+- Issue [#2237](https://github.com/providenetwork/tendermint/issues/2237) : Tendermint "mode"
 - [TenderSeed](https://gitlab.com/polychainlabs/tenderseed) : A lightweight Tendermint Seed Node.

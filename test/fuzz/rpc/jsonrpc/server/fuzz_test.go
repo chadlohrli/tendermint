@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/test/fuzz/rpc/jsonrpc/server"
+	"github.com/providenetwork/tendermint/test/fuzz/rpc/jsonrpc/server"
 )
 
 const testdataCasesDir = "testdata/cases"

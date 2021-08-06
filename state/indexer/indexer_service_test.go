@@ -15,12 +15,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmlog "github.com/tendermint/tendermint/libs/log"
-	indexer "github.com/tendermint/tendermint/state/indexer"
-	kv "github.com/tendermint/tendermint/state/indexer/sink/kv"
-	psql "github.com/tendermint/tendermint/state/indexer/sink/psql"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	tmlog "github.com/providenetwork/tendermint/libs/log"
+	indexer "github.com/providenetwork/tendermint/state/indexer"
+	kv "github.com/providenetwork/tendermint/state/indexer/sink/kv"
+	psql "github.com/providenetwork/tendermint/state/indexer/sink/psql"
+	"github.com/providenetwork/tendermint/types"
 	db "github.com/tendermint/tm-db"
 )
 

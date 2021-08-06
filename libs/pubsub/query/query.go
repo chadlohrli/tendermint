@@ -16,7 +16,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tendermint/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/abci/types"
 )
 
 var (

@@ -3,7 +3,7 @@ package mempool
 import (
 	"crypto/sha256"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // TxKeySize defines the size of the transaction's key used for indexing.

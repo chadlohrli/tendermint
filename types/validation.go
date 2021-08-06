@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tendermint/tendermint/crypto/batch"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	tmmath "github.com/tendermint/tendermint/libs/math"
+	"github.com/providenetwork/tendermint/crypto/batch"
+	"github.com/providenetwork/tendermint/crypto/tmhash"
+	tmmath "github.com/providenetwork/tendermint/libs/math"
 )
 
 const batchVerifyThreshold = 2

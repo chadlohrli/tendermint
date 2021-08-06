@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	tmmath "github.com/providenetwork/tendermint/libs/math"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
 )
 
 // Check VerifyCommit, VerifyCommitLight and VerifyCommitLightTrusting basic

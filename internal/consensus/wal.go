@@ -11,13 +11,13 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	auto "github.com/tendermint/tendermint/internal/libs/autofile"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/libs/service"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
+	auto "github.com/providenetwork/tendermint/internal/libs/autofile"
+	tmjson "github.com/providenetwork/tendermint/libs/json"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmos "github.com/providenetwork/tendermint/libs/os"
+	"github.com/providenetwork/tendermint/libs/service"
+	tmtime "github.com/providenetwork/tendermint/libs/time"
+	tmcons "github.com/providenetwork/tendermint/proto/tendermint/consensus"
 )
 
 const (

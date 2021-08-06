@@ -1,8 +1,8 @@
 package config
 
 import (
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/service"
 	db "github.com/tendermint/tm-db"
 )
 

@@ -6,7 +6,7 @@ order: 3
 
 ## From Binary
 
-To download pre-built binaries, see the [releases page](https://github.com/tendermint/tendermint/releases).
+To download pre-built binaries, see the [releases page](https://github.com/providenetwork/tendermint/releases).
 
 ## Using Homebrew
 
@@ -29,7 +29,7 @@ echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
 Get the source code:
 
 ```sh
-git clone https://github.com/tendermint/tendermint.git
+git clone https://github.com/providenetwork/tendermint.git
 cd tendermint
 ```
 

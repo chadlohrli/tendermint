@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/libs/log"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	jsonrpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/libs/bytes"
+	"github.com/providenetwork/tendermint/libs/log"
+	rpcclient "github.com/providenetwork/tendermint/rpc/client"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	jsonrpcclient "github.com/providenetwork/tendermint/rpc/jsonrpc/client"
+	"github.com/providenetwork/tendermint/types"
 )
 
 /*

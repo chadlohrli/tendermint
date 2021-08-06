@@ -9,8 +9,8 @@ import (
 	"math/big"
 
 	secp256k1 "github.com/btcsuite/btcd/btcec"
-	"github.com/tendermint/tendermint/crypto"
-	tmjson "github.com/tendermint/tendermint/libs/json"
+	"github.com/providenetwork/tendermint/crypto"
+	tmjson "github.com/providenetwork/tendermint/libs/json"
 
 	// necessary for Bitcoin address format
 	"golang.org/x/crypto/ripemd160" // nolint: staticcheck

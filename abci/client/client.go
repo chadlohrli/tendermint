@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/abci/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/libs/service"
 )
 
 const (
@@ -135,7 +135,7 @@ func (r *ReqRes) InvokeCallback() {
 // marked done and SetCallback is called before calling GetCallback as that
 // will invoke the callback twice and create a potential race condition.
 //
-// ref: https://github.com/tendermint/tendermint/issues/5439
+// ref: https://github.com/providenetwork/tendermint/issues/5439
 func (r *ReqRes) GetCallback() func(*types.Response) {
 	r.mtx.RLock()
 	defer r.mtx.RUnlock()

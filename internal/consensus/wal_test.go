@@ -12,12 +12,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/internal/consensus/types"
-	"github.com/tendermint/tendermint/internal/libs/autofile"
-	"github.com/tendermint/tendermint/libs/log"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	tmtypes "github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/crypto/merkle"
+	"github.com/providenetwork/tendermint/internal/consensus/types"
+	"github.com/providenetwork/tendermint/internal/libs/autofile"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmtime "github.com/providenetwork/tendermint/libs/time"
+	tmtypes "github.com/providenetwork/tendermint/types"
 )
 
 const (

@@ -1,7 +1,7 @@
 package p2p
 
 import (
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
 )
 
 // default capacity for the size of a queue
