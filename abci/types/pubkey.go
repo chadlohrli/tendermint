@@ -3,10 +3,10 @@ package types
 import (
 	fmt "fmt"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-	"github.com/tendermint/tendermint/crypto/sr25519"
+	"github.com/providenetwork/tendermint/crypto/ed25519"
+	cryptoenc "github.com/providenetwork/tendermint/crypto/encoding"
+	"github.com/providenetwork/tendermint/crypto/secp256k1"
+	"github.com/providenetwork/tendermint/crypto/sr25519"
 )
 
 func Ed25519ValidatorUpdate(pk []byte, power int64) ValidatorUpdate {

@@ -3,11 +3,11 @@ package checktx
 import (
 	"context"
 
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/mempool"
-	mempoolv0 "github.com/tendermint/tendermint/mempool/v0"
-	"github.com/tendermint/tendermint/proxy"
+	"github.com/providenetwork/tendermint/abci/example/kvstore"
+	"github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/mempool"
+	mempoolv0 "github.com/providenetwork/tendermint/mempool/v0"
+	"github.com/providenetwork/tendermint/proxy"
 )
 
 var mp mempool.Mempool

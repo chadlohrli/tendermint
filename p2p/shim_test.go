@@ -5,13 +5,13 @@ import (
 	"testing"
 
 	"github.com/gogo/protobuf/proto"
+	"github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/p2p"
+	p2pmocks "github.com/providenetwork/tendermint/p2p/mocks"
+	ssproto "github.com/providenetwork/tendermint/proto/tendermint/statesync"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/p2p"
-	p2pmocks "github.com/tendermint/tendermint/p2p/mocks"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
 )
 
 var (

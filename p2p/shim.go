@@ -5,14 +5,14 @@ import (
 	"sort"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/log"
 )
 
 // ============================================================================
 // TODO: Types and business logic below are temporary and will be removed once
 // the legacy p2p stack is removed in favor of the new model.
 //
-// ref: https://github.com/tendermint/tendermint/issues/5670
+// ref: https://github.com/providenetwork/tendermint/issues/5670
 // ============================================================================
 
 var _ Reactor = (*ReactorShim)(nil)

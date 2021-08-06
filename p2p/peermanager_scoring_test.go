@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/providenetwork/tendermint/crypto/ed25519"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 	dbm "github.com/tendermint/tm-db"
 )
 

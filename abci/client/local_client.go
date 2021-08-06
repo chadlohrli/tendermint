@@ -3,9 +3,9 @@ package abcicli
 import (
 	"context"
 
-	types "github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/service"
+	types "github.com/providenetwork/tendermint/abci/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/libs/service"
 )
 
 // NOTE: use defer to unlock mutex because Application might panic (e.g., in

@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/statesync/mocks"
+	"github.com/providenetwork/tendermint/p2p"
+	"github.com/providenetwork/tendermint/statesync/mocks"
 )
 
 func TestSnapshot_Key(t *testing.T) {

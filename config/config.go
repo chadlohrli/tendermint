@@ -438,7 +438,7 @@ type RPCConfig struct {
 	// How long to wait for a tx to be committed during /broadcast_tx_commit
 	// WARNING: Using a value larger than 10s will result in increasing the
 	// global HTTP write timeout, which applies to all connections and endpoints.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/providenetwork/tendermint/issues/3435
 	TimeoutBroadcastTxCommit time.Duration `mapstructure:"timeout-broadcast-tx-commit"`
 
 	// Maximum size of request body, in bytes
@@ -572,7 +572,7 @@ type P2PConfig struct { //nolint: maligned
 	// We only use these if we can’t connect to peers in the addrbook
 	// NOTE: not used by the new PEX reactor. Please use BootstrapPeers instead.
 	// TODO: Remove once p2p refactor is complete
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/providenetwork/tendermint/issues/5670
 	Seeds string `mapstructure:"seeds"`
 
 	// Comma separated list of peers to be added to the peer store
@@ -596,13 +596,13 @@ type P2PConfig struct { //nolint: maligned
 	// Maximum number of inbound peers
 	//
 	// TODO: Remove once p2p refactor is complete in favor of MaxConnections.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/providenetwork/tendermint/issues/5670
 	MaxNumInboundPeers int `mapstructure:"max-num-inbound-peers"`
 
 	// Maximum number of outbound peers to connect to, excluding persistent peers.
 	//
 	// TODO: Remove once p2p refactor is complete in favor of MaxConnections.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/providenetwork/tendermint/issues/5670
 	MaxNumOutboundPeers int `mapstructure:"max-num-outbound-peers"`
 
 	// MaxConnections defines the maximum number of connected peers (inbound and
@@ -757,7 +757,7 @@ type MempoolConfig struct {
 	MaxTxBytes int `mapstructure:"max-tx-bytes"`
 	// Maximum size of a batch of transactions to send to a peer
 	// Including space needed by encoding (one varint per transaction).
-	// XXX: Unused due to https://github.com/tendermint/tendermint/issues/5796
+	// XXX: Unused due to https://github.com/providenetwork/tendermint/issues/5796
 	MaxBatchBytes int `mapstructure:"max-batch-bytes"`
 }
 

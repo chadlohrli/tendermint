@@ -1,7 +1,7 @@
 package behavior
 
 import (
-	"github.com/tendermint/tendermint/p2p"
+	"github.com/providenetwork/tendermint/p2p"
 )
 
 // PeerBehavior is a struct describing a behavior a peer performed.

@@ -3,8 +3,8 @@ package types
 import (
 	"testing"
 
+	"github.com/providenetwork/tendermint/libs/bits"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/bits"
 )
 
 func TestCopy(t *testing.T) {

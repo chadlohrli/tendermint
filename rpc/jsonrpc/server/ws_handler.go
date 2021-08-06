@@ -12,10 +12,10 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	types "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/service"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	types "github.com/providenetwork/tendermint/rpc/jsonrpc/types"
 )
 
 // WebSocket handler
@@ -464,7 +464,7 @@ func (wsc *wsConnection) writeRoutine() {
 
 // All writes to the websocket must (re)set the write deadline.
 // If some writes don't set it while others do, they may timeout incorrectly
-// (https://github.com/tendermint/tendermint/issues/553)
+// (https://github.com/providenetwork/tendermint/issues/553)
 func (wsc *wsConnection) writeMessageWithDeadline(msgType int, msg []byte) error {
 	if err := wsc.baseConn.SetWriteDeadline(time.Now().Add(wsc.writeWait)); err != nil {
 		return err

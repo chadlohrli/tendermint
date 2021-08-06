@@ -7,9 +7,9 @@ import (
 	"time"
 
 	gogotypes "github.com/gogo/protobuf/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/libs/log"
 	"github.com/stretchr/testify/require"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
 )
 
 type testMessage = gogotypes.StringValue

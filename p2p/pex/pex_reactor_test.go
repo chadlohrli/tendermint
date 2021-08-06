@@ -13,11 +13,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/p2p/mock"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	"github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/p2p"
+	"github.com/providenetwork/tendermint/p2p/mock"
+	tmp2p "github.com/providenetwork/tendermint/proto/tendermint/p2p"
 )
 
 var (
@@ -374,7 +374,7 @@ func TestPEXReactorDialsPeerUpToMaxAttemptsInSeedMode(t *testing.T) {
 // this should give it time to request addrs and for the seed
 // to call FlushStop, and allows us to test calling Stop concurrently
 // with FlushStop. Before a fix, this non-deterministically reproduced
-// https://github.com/tendermint/tendermint/issues/3231.
+// https://github.com/providenetwork/tendermint/issues/3231.
 func TestPEXReactorSeedModeFlushStop(t *testing.T) {
 	t.Skip("flaky test, will be replaced by new P2P stack")
 	N := 2
@@ -667,8 +667,8 @@ func TestPexVectors(t *testing.T) {
 // reactor test cases.
 //
 // References:
-// https://github.com/tendermint/tendermint/pull/5733
-// https://github.com/tendermint/tendermint/issues/5732
+// https://github.com/providenetwork/tendermint/pull/5733
+// https://github.com/providenetwork/tendermint/issues/5732
 func tempDir(t *testing.T) string {
 	t.Helper()
 	dir, err := ioutil.TempDir("", "")

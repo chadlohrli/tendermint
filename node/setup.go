@@ -13,32 +13,32 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	bcv0 "github.com/tendermint/tendermint/blockchain/v0"
-	bcv2 "github.com/tendermint/tendermint/blockchain/v2"
-	cfg "github.com/tendermint/tendermint/config"
-	cs "github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/evidence"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmstrings "github.com/tendermint/tendermint/libs/strings"
-	"github.com/tendermint/tendermint/mempool"
-	mempoolv0 "github.com/tendermint/tendermint/mempool/v0"
-	mempoolv1 "github.com/tendermint/tendermint/mempool/v1"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/p2p/pex"
-	protop2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/state/indexer"
-	kv "github.com/tendermint/tendermint/state/indexer/sink/kv"
-	null "github.com/tendermint/tendermint/state/indexer/sink/null"
-	psql "github.com/tendermint/tendermint/state/indexer/sink/psql"
-	"github.com/tendermint/tendermint/statesync"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	bcv0 "github.com/providenetwork/tendermint/blockchain/v0"
+	bcv2 "github.com/providenetwork/tendermint/blockchain/v2"
+	cfg "github.com/providenetwork/tendermint/config"
+	cs "github.com/providenetwork/tendermint/consensus"
+	"github.com/providenetwork/tendermint/crypto"
+	"github.com/providenetwork/tendermint/evidence"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/service"
+	tmstrings "github.com/providenetwork/tendermint/libs/strings"
+	"github.com/providenetwork/tendermint/mempool"
+	mempoolv0 "github.com/providenetwork/tendermint/mempool/v0"
+	mempoolv1 "github.com/providenetwork/tendermint/mempool/v1"
+	"github.com/providenetwork/tendermint/p2p"
+	"github.com/providenetwork/tendermint/p2p/pex"
+	protop2p "github.com/providenetwork/tendermint/proto/tendermint/p2p"
+	"github.com/providenetwork/tendermint/proxy"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/state/indexer"
+	kv "github.com/providenetwork/tendermint/state/indexer/sink/kv"
+	null "github.com/providenetwork/tendermint/state/indexer/sink/null"
+	psql "github.com/providenetwork/tendermint/state/indexer/sink/psql"
+	"github.com/providenetwork/tendermint/statesync"
+	"github.com/providenetwork/tendermint/store"
+	"github.com/providenetwork/tendermint/types"
+	"github.com/providenetwork/tendermint/version"
 )
 
 func initDBs(config *cfg.Config, dbProvider cfg.DBProvider) (blockStore *store.BlockStore, stateDB dbm.DB, err error) {
@@ -678,7 +678,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, config *cfg.Config,
 		// blocks assuming 10s blocks ~ 28 hours.
 		// TODO (melekes): make it dynamic based on the actual block latencies
 		// from the live network.
-		// https://github.com/tendermint/tendermint/issues/3523
+		// https://github.com/providenetwork/tendermint/issues/3523
 		SeedDisconnectWaitPeriod:     28 * time.Hour,
 		PersistentPeersMaxDialPeriod: config.P2P.PersistentPeersMaxDialPeriod,
 	}

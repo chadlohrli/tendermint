@@ -5,7 +5,7 @@ import (
 
 	schnorrkel "github.com/ChainSafe/go-schnorrkel"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/providenetwork/tendermint/crypto"
 )
 
 var _ crypto.BatchVerifier = BatchVerifier{}

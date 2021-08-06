@@ -16,11 +16,11 @@ import (
 	_ "github.com/lib/pq"
 	dockertest "github.com/ory/dockertest"
 	"github.com/ory/dockertest/docker"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/state/indexer"
+	"github.com/providenetwork/tendermint/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/state/indexer"
-	"github.com/tendermint/tendermint/types"
 )
 
 var db *sql.DB

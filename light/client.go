@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/light/store"
-	"github.com/tendermint/tendermint/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmmath "github.com/providenetwork/tendermint/libs/math"
+	"github.com/providenetwork/tendermint/light/provider"
+	"github.com/providenetwork/tendermint/light/store"
+	"github.com/providenetwork/tendermint/types"
 )
 
 type mode byte

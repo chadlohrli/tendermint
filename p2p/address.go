@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/providenetwork/tendermint/crypto"
 )
 
 const (

@@ -6,13 +6,13 @@ import (
 	"testing"
 
 	"github.com/gogo/protobuf/proto"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/libs/pubsub/query"
+	"github.com/providenetwork/tendermint/state/indexer"
+	kvtx "github.com/providenetwork/tendermint/state/indexer/tx/kv"
+	"github.com/providenetwork/tendermint/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/state/indexer"
-	kvtx "github.com/tendermint/tendermint/state/indexer/tx/kv"
-	"github.com/tendermint/tendermint/types"
 	db "github.com/tendermint/tm-db"
 )
 
@@ -317,7 +317,7 @@ func TestTxSearchMultipleTxs(t *testing.T) {
 	require.NoError(t, err)
 
 	// indexed fourth (to test we don't include txs with similar events)
-	// https://github.com/tendermint/tendermint/issues/2908
+	// https://github.com/providenetwork/tendermint/issues/2908
 	txResult4 := txResultWithEvents([]abci.Event{
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: "number.id", Value: "1", Index: true}}},
 	})

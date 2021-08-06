@@ -23,10 +23,10 @@ implementation.
 import (
 	"context"
 
-	"github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/libs/service"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/libs/bytes"
+	"github.com/providenetwork/tendermint/libs/service"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 //go:generate mockery --case underscore --name Client

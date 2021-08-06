@@ -7,15 +7,15 @@ import (
 	"sync"
 	"time"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/libs/clist"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/p2p"
-	protomem "github.com/tendermint/tendermint/proto/tendermint/mempool"
-	"github.com/tendermint/tendermint/types"
+	cfg "github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/internal/libs/clist"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/mempool"
+	"github.com/providenetwork/tendermint/p2p"
+	protomem "github.com/providenetwork/tendermint/proto/tendermint/mempool"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var (
@@ -42,7 +42,7 @@ type Reactor struct {
 
 	// XXX: Currently, this is the only way to get information about a peer. Ideally,
 	// we rely on message-oriented communication to get necessary peer data.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/providenetwork/tendermint/issues/5670
 	peerMgr PeerManager
 
 	mempoolCh   *p2p.Channel
@@ -88,7 +88,7 @@ func NewReactor(
 //
 //
 // TODO: Remove once p2p refactor is complete.
-// ref: https://github.com/tendermint/tendermint/issues/5670
+// ref: https://github.com/providenetwork/tendermint/issues/5670
 func GetChannelShims(config *cfg.MempoolConfig) map[p2p.ChannelID]*p2p.ChannelDescriptorShim {
 	largestTx := make([]byte, config.MaxTxBytes)
 	batchMsg := protomem.Message{
@@ -355,7 +355,7 @@ func (r *Reactor) broadcastTxRoutine(peerID p2p.NodeID, closer *tmsync.Closer) {
 		}
 
 		// NOTE: Transaction batching was disabled due to:
-		// https://github.com/tendermint/tendermint/issues/5796
+		// https://github.com/providenetwork/tendermint/issues/5796
 
 		if _, ok := memTx.senders.Load(peerMempoolID); !ok {
 			// Send the mempool tx to the corresponding peer. Note, the peer may be

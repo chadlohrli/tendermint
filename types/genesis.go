@@ -8,10 +8,10 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	"github.com/providenetwork/tendermint/crypto"
+	tmbytes "github.com/providenetwork/tendermint/libs/bytes"
+	tmjson "github.com/providenetwork/tendermint/libs/json"
+	tmtime "github.com/providenetwork/tendermint/types/time"
 )
 
 const (

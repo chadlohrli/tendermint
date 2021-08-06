@@ -68,7 +68,7 @@ Friendly reminder: We have a [bug bounty program](https://hackerone.com/tendermi
 
 ### FEATURES
 
-- [config] Add `--mode` flag and config variable. See [ADR-52](https://github.com/tendermint/tendermint/blob/master/docs/architecture/adr-052-tendermint-mode.md) @dongsam
+- [config] Add `--mode` flag and config variable. See [ADR-52](https://github.com/providenetwork/tendermint/blob/master/docs/architecture/adr-052-tendermint-mode.md) @dongsam
 - [rpc] \#6329 Don't cap page size in unsafe mode (@gotjoshua, @cmwaters)
 - [pex] \#6305 v2 pex reactor with backwards compatability. Introduces two new pex messages to
   accomodate for the new p2p stack. Removes the notion of seeds and crawling. All peer
@@ -121,6 +121,6 @@ Friendly reminder: We have a [bug bounty program](https://hackerone.com/tendermi
 
 - [types] \#5523 Change json naming of `PartSetHeader` within `BlockID` from `parts` to `part_set_header` (@marbar3778)
 - [privval] \#5638 Increase read/write timeout to 5s and calculate ping interval based on it (@JoeKash)
-- [blockchain/v1] [\#5701](https://github.com/tendermint/tendermint/pull/5701) Handle peers without blocks (@melekes)
+- [blockchain/v1] [\#5701](https://github.com/providenetwork/tendermint/pull/5701) Handle peers without blocks (@melekes)
 - [blockchain/v1] \#5711 Fix deadlock (@melekes)
 - [evidence] \#6375 Fix bug with inconsistent LightClientAttackEvidence hashing (cmwaters)

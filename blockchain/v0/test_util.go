@@ -1,8 +1,8 @@
 package v0
 
 import (
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/types"
 )
 
 func makeTxs(height int64) (txs []types.Tx) {

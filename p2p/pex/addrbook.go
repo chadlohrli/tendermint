@@ -15,12 +15,12 @@ import (
 	"time"
 
 	"github.com/minio/highwayhash"
-	"github.com/tendermint/tendermint/crypto"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/p2p"
+	"github.com/providenetwork/tendermint/crypto"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	tmmath "github.com/providenetwork/tendermint/libs/math"
+	tmrand "github.com/providenetwork/tendermint/libs/rand"
+	"github.com/providenetwork/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/p2p"
 )
 
 const (

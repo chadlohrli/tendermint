@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/log"
 )
 
 type Capabilities struct {

@@ -109,7 +109,7 @@ of complexity in protocol and implementation changes, some of which may either
 overlap or conflict with the upcoming introduction of [ABCI++](https://github.com/tendermint/spec/blob/master/rfc/004-abci%2B%2B.md).
 
 For more information on the various approaches and proposals, please see the
-[mempool discussion](https://github.com/tendermint/tendermint/discussions/6295).
+[mempool discussion](https://github.com/providenetwork/tendermint/discussions/6295).
 
 ## Prior Art
 
@@ -300,4 +300,4 @@ non-contentious and backwards compatible manner.
 ## References
 
 - [ABCI++](https://github.com/tendermint/spec/blob/master/rfc/004-abci%2B%2B.md)
-- [Mempool Discussion](https://github.com/tendermint/tendermint/discussions/6295)
+- [Mempool Discussion](https://github.com/providenetwork/tendermint/discussions/6295)

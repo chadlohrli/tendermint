@@ -7,14 +7,14 @@ import (
 
 	proto "github.com/gogo/protobuf/proto"
 
-	bc "github.com/tendermint/tendermint/blockchain"
-	"github.com/tendermint/tendermint/blockchain/v2/internal/behavior"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/p2p"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blockchain"
-	"github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	bc "github.com/providenetwork/tendermint/blockchain"
+	"github.com/providenetwork/tendermint/blockchain/v2/internal/behavior"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/p2p"
+	bcproto "github.com/providenetwork/tendermint/proto/tendermint/blockchain"
+	"github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (
@@ -464,7 +464,7 @@ func (r *BlockchainReactor) Stop() error {
 
 // Receive implements Reactor by handling different message types.
 // XXX: do not call any methods that can block or incur heavy processing.
-// https://github.com/tendermint/tendermint/issues/2888
+// https://github.com/providenetwork/tendermint/issues/2888
 func (r *BlockchainReactor) Receive(chID byte, src p2p.Peer, msgBytes []byte) {
 	logger := r.logger.With("src", src.ID(), "chID", chID)
 

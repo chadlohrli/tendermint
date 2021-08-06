@@ -3,8 +3,8 @@ package proxy
 import (
 	"context"
 
-	abcicli "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/types"
+	abcicli "github.com/providenetwork/tendermint/abci/client"
+	"github.com/providenetwork/tendermint/abci/types"
 )
 
 //go:generate mockery --case underscore --name AppConnConsensus|AppConnMempool|AppConnQuery|AppConnSnapshot

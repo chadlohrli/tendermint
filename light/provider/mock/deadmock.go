@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/light/provider"
+	"github.com/providenetwork/tendermint/types"
 )
 
 type deadMock struct {

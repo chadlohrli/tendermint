@@ -6,8 +6,8 @@ import (
 	"sort"
 	"strings"
 
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/types"
+	e2e "github.com/providenetwork/tendermint/test/e2e/pkg"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var (
@@ -29,7 +29,7 @@ var (
 
 	// The following specify randomly chosen values for testnet nodes.
 	nodeDatabases = uniformChoice{"goleveldb", "cleveldb", "rocksdb", "boltdb", "badgerdb"}
-	// FIXME: grpc disabled due to https://github.com/tendermint/tendermint/issues/5439
+	// FIXME: grpc disabled due to https://github.com/providenetwork/tendermint/issues/5439
 	nodeABCIProtocols    = uniformChoice{"unix", "tcp", "builtin"} // "grpc"
 	nodePrivvalProtocols = uniformChoice{"file", "unix", "tcp", "grpc"}
 	// FIXME: v2 disabled due to flake

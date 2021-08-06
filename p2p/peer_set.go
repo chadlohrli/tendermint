@@ -3,7 +3,7 @@ package p2p
 import (
 	"net"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
 )
 
 // IPeerSet has a (immutable) subset of the methods of PeerSet.

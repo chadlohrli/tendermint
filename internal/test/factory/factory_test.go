@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 func TestMakeHeader(t *testing.T) {

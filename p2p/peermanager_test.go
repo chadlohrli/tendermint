@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/p2p"
+	"github.com/providenetwork/tendermint/p2p"
 )
 
 // FIXME: We should probably have some randomized property-based tests for the

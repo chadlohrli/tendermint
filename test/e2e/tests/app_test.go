@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/types"
+	e2e "github.com/providenetwork/tendermint/test/e2e/pkg"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // Tests that any initial state given in genesis has made it into the app.

@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-	"github.com/tendermint/tendermint/crypto/sr25519"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	tmstrings "github.com/tendermint/tendermint/libs/strings"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/providenetwork/tendermint/crypto/ed25519"
+	"github.com/providenetwork/tendermint/crypto/secp256k1"
+	"github.com/providenetwork/tendermint/crypto/sr25519"
+	"github.com/providenetwork/tendermint/crypto/tmhash"
+	tmstrings "github.com/providenetwork/tendermint/libs/strings"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
 )
 
 const (

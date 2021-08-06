@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
+	tmos "github.com/providenetwork/tendermint/libs/os"
 	"github.com/stretchr/testify/require"
-	tmos "github.com/tendermint/tendermint/libs/os"
 )
 
 func TestCopyFile(t *testing.T) {
@@ -138,7 +138,7 @@ func newTestProgram(t *testing.T, environVar string) (cmd *exec.Cmd, stdout *byt
 
 // Ensure that using CopyFile does not truncate the destination file before
 // the origin is positively a non-directory and that it is ready for copying.
-// See https://github.com/tendermint/tendermint/issues/6427
+// See https://github.com/providenetwork/tendermint/issues/6427
 func TestTrickedTruncation(t *testing.T) {
 	tmpDir, err := ioutil.TempDir(os.TempDir(), "pwn_truncate")
 	if err != nil {

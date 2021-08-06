@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctest "github.com/tendermint/tendermint/rpc/test"
+	"github.com/providenetwork/tendermint/abci/example/kvstore"
+	rpchttp "github.com/providenetwork/tendermint/rpc/client/http"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	rpctest "github.com/providenetwork/tendermint/rpc/test"
 )
 
 func ExampleHTTP_simple() {

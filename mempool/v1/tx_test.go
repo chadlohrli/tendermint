@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/providenetwork/tendermint/mempool"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/mempool"
 )
 
 func TestTxStore_GetTxBySender(t *testing.T) {
