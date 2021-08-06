@@ -6,16 +6,16 @@ import (
 	"sync"
 	"time"
 
-	bc "github.com/tendermint/tendermint/internal/blocksync"
-	cons "github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmSync "github.com/tendermint/tendermint/libs/sync"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
+	bc "github.com/providenetwork/tendermint/internal/blocksync"
+	cons "github.com/providenetwork/tendermint/internal/consensus"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/service"
+	tmSync "github.com/providenetwork/tendermint/libs/sync"
+	bcproto "github.com/providenetwork/tendermint/proto/tendermint/blocksync"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/store"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var (
@@ -27,7 +27,7 @@ var (
 	//
 	//
 	// TODO: Remove once p2p refactor is complete.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/providenetwork/tendermint/issues/5670
 	ChannelShims = map[p2p.ChannelID]*p2p.ChannelDescriptorShim{
 		BlockchainChannel: {
 			MsgType: new(bcproto.Message),

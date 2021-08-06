@@ -10,19 +10,19 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	abcicli "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/evidence"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	mempoolv0 "github.com/tendermint/tendermint/internal/mempool/v0"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
+	abcicli "github.com/providenetwork/tendermint/abci/client"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/internal/evidence"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	mempoolv0 "github.com/providenetwork/tendermint/internal/mempool/v0"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/test/factory"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmcons "github.com/providenetwork/tendermint/proto/tendermint/consensus"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/store"
+	"github.com/providenetwork/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 )
 
@@ -278,7 +278,7 @@ func TestByzantinePrevoteEquivocation(t *testing.T) {
 // B sees a commit, A doesn't.
 // Heal partition and ensure A sees the commit
 func TestByzantineConflictingProposalsWithPartition(t *testing.T) {
-	// TODO: https://github.com/tendermint/tendermint/issues/6092
+	// TODO: https://github.com/providenetwork/tendermint/issues/6092
 	t.SkipNow()
 
 	// n := 4

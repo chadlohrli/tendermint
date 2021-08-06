@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/types"
 )
 
 func TestRouter_ConstructQueueFactory(t *testing.T) {

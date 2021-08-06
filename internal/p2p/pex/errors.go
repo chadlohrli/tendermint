@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tendermint/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/p2p"
 )
 
 type ErrAddrBookNonRoutable struct {

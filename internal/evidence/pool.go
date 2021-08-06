@@ -13,11 +13,11 @@ import (
 	"github.com/google/orderedcode"
 	dbm "github.com/tendermint/tm-db"
 
-	clist "github.com/tendermint/tendermint/internal/libs/clist"
-	"github.com/tendermint/tendermint/libs/log"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	clist "github.com/providenetwork/tendermint/internal/libs/clist"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (

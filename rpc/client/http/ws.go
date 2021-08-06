@@ -7,13 +7,13 @@ import (
 	"strings"
 	"time"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/service"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	jsonrpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	tmjson "github.com/providenetwork/tendermint/libs/json"
+	tmpubsub "github.com/providenetwork/tendermint/libs/pubsub"
+	"github.com/providenetwork/tendermint/libs/service"
+	rpcclient "github.com/providenetwork/tendermint/rpc/client"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	jsonrpcclient "github.com/providenetwork/tendermint/rpc/jsonrpc/client"
 )
 
 var errNotRunning = errors.New("client is not running. Use .Start() method to start")

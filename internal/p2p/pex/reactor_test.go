@@ -9,13 +9,13 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/p2ptest"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	"github.com/tendermint/tendermint/libs/log"
-	proto "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/crypto/ed25519"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/p2p/p2ptest"
+	"github.com/providenetwork/tendermint/internal/p2p/pex"
+	"github.com/providenetwork/tendermint/libs/log"
+	proto "github.com/providenetwork/tendermint/proto/tendermint/p2p"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (

@@ -9,12 +9,12 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abcitypes "github.com/tendermint/tendermint/abci/types"
-	tmcfg "github.com/tendermint/tendermint/config"
-	prototmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	"github.com/tendermint/tendermint/state/indexer"
-	"github.com/tendermint/tendermint/state/mocks"
-	"github.com/tendermint/tendermint/types"
+	abcitypes "github.com/providenetwork/tendermint/abci/types"
+	tmcfg "github.com/providenetwork/tendermint/config"
+	prototmstate "github.com/providenetwork/tendermint/proto/tendermint/state"
+	"github.com/providenetwork/tendermint/state/indexer"
+	"github.com/providenetwork/tendermint/state/mocks"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (

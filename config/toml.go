@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	tmos "github.com/tendermint/tendermint/libs/os"
+	tmos "github.com/providenetwork/tendermint/libs/os"
 )
 
 // DefaultDirPerm is the default permissions used when creating directories.
@@ -238,7 +238,7 @@ max-subscriptions-per-client = {{ .RPC.MaxSubscriptionsPerClient }}
 # How long to wait for a tx to be committed during /broadcast_tx_commit.
 # WARNING: Using a value larger than 10s will result in increasing the
 # global HTTP write timeout, which applies to all connections and endpoints.
-# See https://github.com/tendermint/tendermint/issues/3435
+# See https://github.com/providenetwork/tendermint/issues/3435
 timeout-broadcast-tx-commit = "{{ .RPC.TimeoutBroadcastTxCommit }}"
 
 # Maximum size of request body, in bytes
@@ -290,7 +290,7 @@ external-address = "{{ .P2P.ExternalAddress }}"
 # We only use these if we can’t connect to peers in the addrbook
 # NOTE: not used by the new PEX reactor. Please use BootstrapPeers instead.
 # TODO: Remove once p2p refactor is complete
-# ref: https:#github.com/tendermint/tendermint/issues/5670
+# ref: https:#github.com/providenetwork/tendermint/issues/5670
 seeds = "{{ .P2P.Seeds }}"
 
 # Comma separated list of peers to be added to the peer store
@@ -314,13 +314,13 @@ addr-book-strict = {{ .P2P.AddrBookStrict }}
 # Maximum number of inbound peers
 #
 # TODO: Remove once p2p refactor is complete in favor of MaxConnections.
-# ref: https://github.com/tendermint/tendermint/issues/5670
+# ref: https://github.com/providenetwork/tendermint/issues/5670
 max-num-inbound-peers = {{ .P2P.MaxNumInboundPeers }}
 
 # Maximum number of outbound peers to connect to, excluding persistent peers
 #
 # TODO: Remove once p2p refactor is complete in favor of MaxConnections.
-# ref: https://github.com/tendermint/tendermint/issues/5670
+# ref: https://github.com/providenetwork/tendermint/issues/5670
 max-num-outbound-peers = {{ .P2P.MaxNumOutboundPeers }}
 
 # Maximum number of connections (inbound and outbound).
@@ -351,7 +351,7 @@ recv-rate = {{ .P2P.RecvRate }}
 pex = {{ .P2P.PexReactor }}
 
 # Comma separated list of peer IDs to keep private (will not be gossiped to other peers)
-# Warning: IPs will be exposed at /net_info, for more information https://github.com/tendermint/tendermint/issues/3055
+# Warning: IPs will be exposed at /net_info, for more information https://github.com/providenetwork/tendermint/issues/3055
 private-peer-ids = "{{ .P2P.PrivatePeerIDs }}"
 
 # Toggle to disable guard against peers connecting from the same ip.
@@ -396,7 +396,7 @@ max-tx-bytes = {{ .Mempool.MaxTxBytes }}
 
 # Maximum size of a batch of transactions to send to a peer
 # Including space needed by encoding (one varint per transaction).
-# XXX: Unused due to https://github.com/tendermint/tendermint/issues/5796
+# XXX: Unused due to https://github.com/providenetwork/tendermint/issues/5796
 max-batch-bytes = {{ .Mempool.MaxBatchBytes }}
 
 # ttl-duration, if non-zero, defines the maximum amount of time a transaction

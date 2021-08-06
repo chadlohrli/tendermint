@@ -13,22 +13,22 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/blocksync/v2/internal/behavior"
-	cons "github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/mempool/mock"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	sf "github.com/tendermint/tendermint/state/test/factory"
-	tmstore "github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	cfg "github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/internal/blocksync/v2/internal/behavior"
+	cons "github.com/providenetwork/tendermint/internal/consensus"
+	"github.com/providenetwork/tendermint/internal/mempool/mock"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/p2p/conn"
+	"github.com/providenetwork/tendermint/internal/test/factory"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/service"
+	bcproto "github.com/providenetwork/tendermint/proto/tendermint/blocksync"
+	"github.com/providenetwork/tendermint/proxy"
+	sm "github.com/providenetwork/tendermint/state"
+	sf "github.com/providenetwork/tendermint/state/test/factory"
+	tmstore "github.com/providenetwork/tendermint/store"
+	"github.com/providenetwork/tendermint/types"
 )
 
 type mockPeer struct {
@@ -184,7 +184,7 @@ func newTestReactor(t *testing.T, p testReactorParams) *BlockchainReactor {
 }
 
 // This test is left here and not deleted to retain the termination cases for
-// future improvement in [#4482](https://github.com/tendermint/tendermint/issues/4482).
+// future improvement in [#4482](https://github.com/providenetwork/tendermint/issues/4482).
 // func TestReactorTerminationScenarios(t *testing.T) {
 
 // 	config := cfg.ResetTestRoot("blockchain_reactor_v2_test")

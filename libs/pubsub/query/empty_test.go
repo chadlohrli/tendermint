@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/libs/pubsub/query"
 )
 
 func TestEmptyQueryMatchesAnything(t *testing.T) {

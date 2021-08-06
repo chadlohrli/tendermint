@@ -3,7 +3,7 @@ package debug
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/log"
 )
 
 var (

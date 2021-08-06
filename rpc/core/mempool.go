@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	mempl "github.com/tendermint/tendermint/internal/mempool"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	mempl "github.com/providenetwork/tendermint/internal/mempool"
+	tmpubsub "github.com/providenetwork/tendermint/libs/pubsub"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	rpctypes "github.com/providenetwork/tendermint/rpc/jsonrpc/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

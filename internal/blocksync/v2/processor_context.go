@@ -3,9 +3,9 @@ package v2
 import (
 	"fmt"
 
-	cons "github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	cons "github.com/providenetwork/tendermint/internal/consensus"
+	"github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/types"
 )
 
 type processorContext interface {

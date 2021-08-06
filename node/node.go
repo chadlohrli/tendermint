@@ -13,31 +13,31 @@ import (
 	_ "github.com/lib/pq" // provide the psql db driver
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	cfg "github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/crypto"
+	cs "github.com/providenetwork/tendermint/internal/consensus"
+	"github.com/providenetwork/tendermint/internal/mempool"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/p2p/pex"
+	"github.com/providenetwork/tendermint/internal/statesync"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmnet "github.com/providenetwork/tendermint/libs/net"
+	tmpubsub "github.com/providenetwork/tendermint/libs/pubsub"
+	"github.com/providenetwork/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/libs/strings"
+	tmtime "github.com/providenetwork/tendermint/libs/time"
+	"github.com/providenetwork/tendermint/light"
+	"github.com/providenetwork/tendermint/privval"
+	tmgrpc "github.com/providenetwork/tendermint/privval/grpc"
+	"github.com/providenetwork/tendermint/proxy"
+	rpccore "github.com/providenetwork/tendermint/rpc/core"
+	grpccore "github.com/providenetwork/tendermint/rpc/grpc"
+	rpcserver "github.com/providenetwork/tendermint/rpc/jsonrpc/server"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/store"
+	"github.com/providenetwork/tendermint/types"
 	"github.com/rs/cors"
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	cs "github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	"github.com/tendermint/tendermint/internal/statesync"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/libs/strings"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	"github.com/tendermint/tendermint/light"
-	"github.com/tendermint/tendermint/privval"
-	tmgrpc "github.com/tendermint/tendermint/privval/grpc"
-	"github.com/tendermint/tendermint/proxy"
-	rpccore "github.com/tendermint/tendermint/rpc/core"
-	grpccore "github.com/tendermint/tendermint/rpc/grpc"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
 )
 
 // nodeImpl is the highest level interface to a full Tendermint node.
@@ -308,7 +308,7 @@ func makeNode(config *cfg.Config,
 	// Set up state sync reactor, and schedule a sync if requested.
 	// FIXME The way we do phased startups (e.g. replay -> block sync -> consensus) is very messy,
 	// we should clean this whole thing up. See:
-	// https://github.com/tendermint/tendermint/issues/4644
+	// https://github.com/providenetwork/tendermint/issues/4644
 	var (
 		stateSyncReactor     *statesync.Reactor
 		stateSyncReactorShim *p2p.ReactorShim
@@ -800,7 +800,7 @@ func (n *nodeImpl) startRPC() ([]net.Listener, error) {
 	config.MaxOpenConnections = n.config.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/providenetwork/tendermint/issues/3435
 	if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 		config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}
@@ -879,7 +879,7 @@ func (n *nodeImpl) startRPC() ([]net.Listener, error) {
 		config.MaxOpenConnections = n.config.RPC.GRPCMaxOpenConnections
 		// If necessary adjust global WriteTimeout to ensure it's greater than
 		// TimeoutBroadcastTxCommit.
-		// See https://github.com/tendermint/tendermint/issues/3435
+		// See https://github.com/providenetwork/tendermint/issues/3435
 		if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 			config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 		}

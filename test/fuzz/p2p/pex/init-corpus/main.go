@@ -10,11 +10,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/crypto/ed25519"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/p2p/pex"
+	tmp2p "github.com/providenetwork/tendermint/proto/tendermint/p2p"
+	"github.com/providenetwork/tendermint/types"
 )
 
 func main() {

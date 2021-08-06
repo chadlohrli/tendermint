@@ -7,11 +7,11 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/light"
-	"github.com/tendermint/tendermint/light/provider"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/light"
+	"github.com/providenetwork/tendermint/light/provider"
+	dbs "github.com/providenetwork/tendermint/light/store/db"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // NOTE: block is produced every minute. Make sure the verification time

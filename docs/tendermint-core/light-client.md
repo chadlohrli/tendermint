@@ -9,7 +9,7 @@ applications. Tendermint provides unique speed and security properties for
 light client applications.
 
 See our [light
-package](https://pkg.go.dev/github.com/tendermint/tendermint/light?tab=doc).
+package](https://pkg.go.dev/github.com/providenetwork/tendermint/light?tab=doc).
 
 ## Overview
 
@@ -33,7 +33,7 @@ target height. From there, all the application state is verifiable with
 
 ## Security
 
-A light client is initialized from a point of trust using [Trust Options](https://pkg.go.dev/github.com/tendermint/tendermint/light?tab=doc#TrustOptions),
+A light client is initialized from a point of trust using [Trust Options](https://pkg.go.dev/github.com/providenetwork/tendermint/light?tab=doc#TrustOptions),
 a provider and a set of witnesses. This sets the trust period: the period that
 full nodes should be accountable for faulty behavior and a trust level: the
 fraction of validators in a validator set with which we trust that at least one

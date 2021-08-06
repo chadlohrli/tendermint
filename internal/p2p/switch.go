@@ -10,13 +10,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/libs/cmap"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/crypto"
+	"github.com/providenetwork/tendermint/internal/p2p/conn"
+	"github.com/providenetwork/tendermint/libs/cmap"
+	tmrand "github.com/providenetwork/tendermint/libs/rand"
+	"github.com/providenetwork/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (
@@ -415,7 +415,7 @@ func (sw *Switch) stopAndRemovePeer(peer Peer, reason interface{}) {
 	// Removing a peer should go last to avoid a situation where a peer
 	// reconnect to our node and the switch calls InitPeer before
 	// RemovePeer is finished.
-	// https://github.com/tendermint/tendermint/issues/3338
+	// https://github.com/providenetwork/tendermint/issues/3338
 	if sw.peers.Remove(peer) {
 		sw.metrics.Peers.Add(float64(-1))
 	}

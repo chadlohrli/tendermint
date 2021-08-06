@@ -6,9 +6,9 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/proxy"
+	"github.com/providenetwork/tendermint/abci/example/kvstore"
+	"github.com/providenetwork/tendermint/internal/mempool"
+	"github.com/providenetwork/tendermint/proxy"
 )
 
 func BenchmarkReap(b *testing.B) {

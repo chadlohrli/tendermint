@@ -1,6 +1,6 @@
 #!/bin/bash -eu
 
-export FUZZ_ROOT="github.com/tendermint/tendermint"
+export FUZZ_ROOT="github.com/providenetwork/tendermint"
 
 (cd test/fuzz/p2p/addrbook; go run ./init-corpus/main.go)
 compile_go_fuzzer "$FUZZ_ROOT"/test/fuzz/p2p/addrbook Fuzz fuzz_p2p_addrbook fuzz

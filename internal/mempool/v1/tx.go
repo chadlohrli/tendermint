@@ -4,10 +4,10 @@ import (
 	"sort"
 	"time"
 
-	"github.com/tendermint/tendermint/internal/libs/clist"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/internal/libs/clist"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/internal/mempool"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // WrappedTx defines a wrapper around a raw transaction with additional metadata

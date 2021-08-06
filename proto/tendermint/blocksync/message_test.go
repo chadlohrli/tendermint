@@ -8,8 +8,8 @@ import (
 	proto "github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/types"
+	bcproto "github.com/providenetwork/tendermint/proto/tendermint/blocksync"
+	"github.com/providenetwork/tendermint/types"
 )
 
 func TestBlockRequest_Validate(t *testing.T) {

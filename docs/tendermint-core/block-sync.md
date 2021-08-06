@@ -27,7 +27,7 @@ daemon will switch out of Block Sync and into the normal consensus mode.
 After running for some time, the node is considered `caught up` if it
 has at least one peer and it's height is at least as high as the max
 reported peer height. See [the IsCaughtUp
-method](https://github.com/tendermint/tendermint/blob/b467515719e686e4678e6da4e102f32a491b85a0/blockchain/pool.go#L128).
+method](https://github.com/providenetwork/tendermint/blob/b467515719e686e4678e6da4e102f32a491b85a0/blockchain/pool.go#L128).
 
 Note: There are two versions of Block Sync. We recommend using v0 as v2 is still in beta.
   If you would like to use a different version you can do so by changing the version in the `config.toml`:
@@ -45,7 +45,7 @@ version = "v0"
 ```
 
 If we're lagging sufficiently, we should go back to block syncing, but
-this is an [open issue](https://github.com/tendermint/tendermint/issues/129).
+this is an [open issue](https://github.com/providenetwork/tendermint/issues/129).
 
 ## The Block Sync event
 When the tendermint blockchain core launches, it might switch to the `block-sync`
@@ -55,4 +55,4 @@ the network best height, it will switches to the state sync mechanism and then e
 another event for exposing the fast-sync `complete` status and the state `height`.
 
 The user can query the events by subscribing `EventQueryBlockSyncStatus`
-Please check [types](https://pkg.go.dev/github.com/tendermint/tendermint/types?utm_source=godoc#pkg-constants) for the details.
+Please check [types](https://pkg.go.dev/github.com/providenetwork/tendermint/types?utm_source=godoc#pkg-constants) for the details.

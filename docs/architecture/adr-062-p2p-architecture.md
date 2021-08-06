@@ -577,7 +577,7 @@ func EchoReactor(ctx context.Context, channel *p2p.Channel, peerUpdates *p2p.Pee
 
 ## Status
 
-Partially implemented ([#5670](https://github.com/tendermint/tendermint/issues/5670))
+Partially implemented ([#5670](https://github.com/providenetwork/tendermint/issues/5670))
 
 ## Consequences
 
@@ -612,4 +612,4 @@ Partially implemented ([#5670](https://github.com/tendermint/tendermint/issues/5
 ## References
 
 * [ADR 061: P2P Refactor Scope](adr-061-p2p-refactor-scope.md)
-* [#5670 p2p: internal refactor and architecture redesign](https://github.com/tendermint/tendermint/issues/5670)
+* [#5670 p2p: internal refactor and architecture redesign](https://github.com/providenetwork/tendermint/issues/5670)

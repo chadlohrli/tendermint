@@ -3,8 +3,8 @@ package indexer
 import (
 	"context"
 
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // XXX/TODO: These types should be moved to the indexer package.

@@ -3,9 +3,9 @@ package behavior
 import (
 	"errors"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // Reporter provides an interface for reactors to report the behavior

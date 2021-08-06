@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/types"
+	tmrand "github.com/providenetwork/tendermint/libs/rand"
+	"github.com/providenetwork/tendermint/types"
 )
 
 func TestLoadOrGenNodeKey(t *testing.T) {

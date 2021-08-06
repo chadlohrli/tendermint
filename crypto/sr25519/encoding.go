@@ -1,6 +1,6 @@
 package sr25519
 
-import tmjson "github.com/tendermint/tendermint/libs/json"
+import tmjson "github.com/providenetwork/tendermint/libs/json"
 
 const (
 	PrivKeyName = "tendermint/PrivKeySr25519"

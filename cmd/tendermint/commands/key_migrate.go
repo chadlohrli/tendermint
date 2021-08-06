@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
+	cfg "github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/scripts/keymigrate"
 	"github.com/spf13/cobra"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/scripts/keymigrate"
 )
 
 func MakeKeyMigrateCommand() *cobra.Command {

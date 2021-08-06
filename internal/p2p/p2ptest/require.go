@@ -7,8 +7,8 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // RequireEmpty requires that the given channel is empty.

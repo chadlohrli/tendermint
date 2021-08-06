@@ -8,16 +8,16 @@ import (
 	"github.com/spf13/cobra"
 	tmdb "github.com/tendermint/tm-db"
 
-	abcitypes "github.com/tendermint/tendermint/abci/types"
-	tmcfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/libs/progressbar"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	"github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/state/indexer"
-	"github.com/tendermint/tendermint/state/indexer/sink/kv"
-	"github.com/tendermint/tendermint/state/indexer/sink/psql"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
+	abcitypes "github.com/providenetwork/tendermint/abci/types"
+	tmcfg "github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/internal/libs/progressbar"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	"github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/state/indexer"
+	"github.com/providenetwork/tendermint/state/indexer/sink/kv"
+	"github.com/providenetwork/tendermint/state/indexer/sink/psql"
+	"github.com/providenetwork/tendermint/store"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (

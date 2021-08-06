@@ -14,23 +14,23 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	"github.com/tendermint/tendermint/abci/server"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/light"
-	lproxy "github.com/tendermint/tendermint/light/proxy"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/privval"
-	grpcprivval "github.com/tendermint/tendermint/privval/grpc"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
+	"github.com/providenetwork/tendermint/abci/server"
+	"github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/crypto/ed25519"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmnet "github.com/providenetwork/tendermint/libs/net"
+	"github.com/providenetwork/tendermint/light"
+	lproxy "github.com/providenetwork/tendermint/light/proxy"
+	lrpc "github.com/providenetwork/tendermint/light/rpc"
+	dbs "github.com/providenetwork/tendermint/light/store/db"
+	"github.com/providenetwork/tendermint/node"
+	"github.com/providenetwork/tendermint/privval"
+	grpcprivval "github.com/providenetwork/tendermint/privval/grpc"
+	privvalproto "github.com/providenetwork/tendermint/proto/tendermint/privval"
+	"github.com/providenetwork/tendermint/proxy"
+	rpcserver "github.com/providenetwork/tendermint/rpc/jsonrpc/server"
+	e2e "github.com/providenetwork/tendermint/test/e2e/pkg"
 )
 
 var logger = log.MustNewDefaultLogger(log.LogFormatPlain, log.LogLevelInfo, false)
@@ -191,7 +191,7 @@ func startLightNode(cfg *Config) error {
 	rpccfg.MaxOpenConnections = tmcfg.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/providenetwork/tendermint/issues/3435
 	if rpccfg.WriteTimeout <= tmcfg.RPC.TimeoutBroadcastTxCommit {
 		rpccfg.WriteTimeout = tmcfg.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

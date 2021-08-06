@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"math"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (

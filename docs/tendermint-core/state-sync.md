@@ -15,4 +15,4 @@ Information on how to configure state sync is located in the [nodes section](../
 When a node starts with the statesync flag enabled in the config file, it will emit two events: one upon starting statesync and the other upon completion.
 
 The user can query the events by subscribing `EventQueryStateSyncStatus`
-Please check [types](https://pkg.go.dev/github.com/tendermint/tendermint/types?utm_source=godoc#pkg-constants) for the details.
+Please check [types](https://pkg.go.dev/github.com/providenetwork/tendermint/types?utm_source=godoc#pkg-constants) for the details.

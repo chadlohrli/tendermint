@@ -170,7 +170,7 @@ max-subscriptions-per-client = 5
 # How long to wait for a tx to be committed during /broadcast_tx_commit.
 # WARNING: Using a value larger than 10s will result in increasing the
 # global HTTP write timeout, which applies to all connections and endpoints.
-# See https://github.com/tendermint/tendermint/issues/3435
+# See https://github.com/providenetwork/tendermint/issues/3435
 timeout-broadcast-tx-commit = "10s"
 
 # Maximum size of request body, in bytes
@@ -305,7 +305,7 @@ max-tx-bytes = 1048576
 
 # Maximum size of a batch of transactions to send to a peer
 # Including space needed by encoding (one varint per transaction).
-# XXX: Unused due to https://github.com/tendermint/tendermint/issues/5796
+# XXX: Unused due to https://github.com/providenetwork/tendermint/issues/5796
 max-batch-bytes = 0
 
 # ttl-duration, if non-zero, defines the maximum amount of time a transaction

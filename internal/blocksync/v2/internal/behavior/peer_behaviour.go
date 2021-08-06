@@ -1,6 +1,6 @@
 package behavior
 
-import "github.com/tendermint/tendermint/types"
+import "github.com/providenetwork/tendermint/types"
 
 // PeerBehavior is a struct describing a behavior a peer performed.
 // `peerID` identifies the peer and reason characterizes the specific

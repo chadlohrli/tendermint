@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	tmquery "github.com/tendermint/tendermint/libs/pubsub/query"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	tmjson "github.com/providenetwork/tendermint/libs/json"
+	tmpubsub "github.com/providenetwork/tendermint/libs/pubsub"
+	tmquery "github.com/providenetwork/tendermint/libs/pubsub/query"
 )
 
 // Reserved event types (alphabetically sorted).

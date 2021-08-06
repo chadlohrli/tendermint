@@ -4,10 +4,10 @@ import (
 	"errors"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/tendermint/tendermint/internal/p2p"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	bcproto "github.com/providenetwork/tendermint/proto/tendermint/blocksync"
+	"github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var (

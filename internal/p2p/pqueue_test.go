@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/log"
 )
 
 func TestCloseWhileDequeueFull(t *testing.T) {

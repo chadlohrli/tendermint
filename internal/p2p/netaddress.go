@@ -5,7 +5,7 @@
 package p2p
 
 import (
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 type NetAddress = types.NetAddress

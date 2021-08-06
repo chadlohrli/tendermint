@@ -7,13 +7,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/libs/service"
-	protop2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/p2p/conn"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmmath "github.com/providenetwork/tendermint/libs/math"
+	"github.com/providenetwork/tendermint/libs/service"
+	protop2p "github.com/providenetwork/tendermint/proto/tendermint/p2p"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var (
@@ -22,7 +22,7 @@ var (
 )
 
 // TODO: Consolidate with params file.
-// See https://github.com/tendermint/tendermint/issues/6371
+// See https://github.com/providenetwork/tendermint/issues/6371
 const (
 	// the minimum time one peer can send another request to the same peer
 	minReceiveRequestInterval = 100 * time.Millisecond

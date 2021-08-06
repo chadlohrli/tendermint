@@ -3,11 +3,11 @@ package v0
 import (
 	"context"
 
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/mempool"
-	mempoolv0 "github.com/tendermint/tendermint/internal/mempool/v0"
-	"github.com/tendermint/tendermint/proxy"
+	"github.com/providenetwork/tendermint/abci/example/kvstore"
+	"github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/internal/mempool"
+	mempoolv0 "github.com/providenetwork/tendermint/internal/mempool/v0"
+	"github.com/providenetwork/tendermint/proxy"
 )
 
 var mp mempool.Mempool

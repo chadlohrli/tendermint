@@ -11,16 +11,16 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/internal/evidence"
-	"github.com/tendermint/tendermint/internal/evidence/mocks"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	sm "github.com/tendermint/tendermint/state"
-	smmocks "github.com/tendermint/tendermint/state/mocks"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/crypto"
+	"github.com/providenetwork/tendermint/crypto/tmhash"
+	"github.com/providenetwork/tendermint/internal/evidence"
+	"github.com/providenetwork/tendermint/internal/evidence/mocks"
+	"github.com/providenetwork/tendermint/internal/test/factory"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	sm "github.com/providenetwork/tendermint/state"
+	smmocks "github.com/providenetwork/tendermint/state/mocks"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (

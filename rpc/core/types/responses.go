@@ -5,11 +5,11 @@ import (
 	"errors"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/libs/bytes"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/crypto"
+	"github.com/providenetwork/tendermint/libs/bytes"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // List of standardized errors used across RPC

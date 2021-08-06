@@ -7,15 +7,15 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/config"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/p2ptest"
-	"github.com/tendermint/tendermint/libs/log"
-	protomem "github.com/tendermint/tendermint/proto/tendermint/mempool"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/abci/example/kvstore"
+	"github.com/providenetwork/tendermint/config"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/internal/mempool"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/internal/p2p/p2ptest"
+	"github.com/providenetwork/tendermint/libs/log"
+	protomem "github.com/providenetwork/tendermint/proto/tendermint/mempool"
+	"github.com/providenetwork/tendermint/types"
 )
 
 type reactorTestSuite struct {

@@ -6,16 +6,16 @@ import (
 	"os"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/libs/service"
-	nm "github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/proxy"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	core_grpc "github.com/tendermint/tendermint/rpc/grpc"
-	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	cfg "github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmnet "github.com/providenetwork/tendermint/libs/net"
+	"github.com/providenetwork/tendermint/libs/service"
+	nm "github.com/providenetwork/tendermint/node"
+	"github.com/providenetwork/tendermint/proxy"
+	ctypes "github.com/providenetwork/tendermint/rpc/core/types"
+	core_grpc "github.com/providenetwork/tendermint/rpc/grpc"
+	rpcclient "github.com/providenetwork/tendermint/rpc/jsonrpc/client"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater

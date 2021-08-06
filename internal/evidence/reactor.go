@@ -6,13 +6,13 @@ import (
 	"sync"
 	"time"
 
-	clist "github.com/tendermint/tendermint/internal/libs/clist"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	clist "github.com/providenetwork/tendermint/internal/libs/clist"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/internal/p2p"
+	"github.com/providenetwork/tendermint/libs/log"
+	"github.com/providenetwork/tendermint/libs/service"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var (
@@ -24,7 +24,7 @@ var (
 	//
 	//
 	// TODO: Remove once p2p refactor is complete.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/providenetwork/tendermint/issues/5670
 	ChannelShims = map[p2p.ChannelID]*p2p.ChannelDescriptorShim{
 		EvidenceChannel: {
 			MsgType: new(tmproto.EvidenceList),
@@ -135,7 +135,7 @@ func (r *Reactor) handleEvidenceMessage(envelope p2p.Envelope) error {
 		// send and receive one piece of evidence at a time. Or potentially consider
 		// batching evidence.
 		//
-		// see: https://github.com/tendermint/tendermint/issues/4729
+		// see: https://github.com/providenetwork/tendermint/issues/4729
 		for i := 0; i < len(msg.Evidence); i++ {
 			ev, err := types.EvidenceFromProto(&msg.Evidence[i])
 			if err != nil {
@@ -220,7 +220,7 @@ func (r *Reactor) processEvidenceCh() {
 // The peer may also receive the same piece of evidence multiple times if it
 // connects/disconnects frequently from the broadcasting peer(s).
 //
-// REF: https://github.com/tendermint/tendermint/issues/4727
+// REF: https://github.com/providenetwork/tendermint/issues/4727
 func (r *Reactor) processPeerUpdate(peerUpdate p2p.PeerUpdate) {
 	r.Logger.Debug("received peer update", "peer", peerUpdate.NodeID, "status", peerUpdate.Status)
 
@@ -290,7 +290,7 @@ func (r *Reactor) processPeerUpdates() {
 // TODO: This should be refactored so that we do not blindly gossip evidence
 // that the peer has already received or may not be ready for.
 //
-// REF: https://github.com/tendermint/tendermint/issues/4727
+// REF: https://github.com/providenetwork/tendermint/issues/4727
 func (r *Reactor) broadcastEvidenceLoop(peerID types.NodeID, closer *tmsync.Closer) {
 	var next *clist.CElement
 

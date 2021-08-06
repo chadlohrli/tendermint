@@ -3,8 +3,8 @@ package kvstore
 import (
 	mrand "math/rand"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
+	"github.com/providenetwork/tendermint/abci/types"
+	tmrand "github.com/providenetwork/tendermint/libs/rand"
 )
 
 // RandVal creates one random validator, with a key derived

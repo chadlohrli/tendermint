@@ -9,10 +9,10 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/providenetwork/tendermint/abci/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	tmnet "github.com/providenetwork/tendermint/libs/net"
+	"github.com/providenetwork/tendermint/libs/service"
 )
 
 // A gRPC client.

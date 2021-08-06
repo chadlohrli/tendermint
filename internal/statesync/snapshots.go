@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/types"
+	tmsync "github.com/providenetwork/tendermint/internal/libs/sync"
+	"github.com/providenetwork/tendermint/types"
 )
 
 // snapshotKey is a snapshot key used for lookups.

@@ -9,11 +9,11 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	tmtime "github.com/providenetwork/tendermint/libs/time"
+	tmstate "github.com/providenetwork/tendermint/proto/tendermint/state"
+	tmversion "github.com/providenetwork/tendermint/proto/tendermint/version"
+	"github.com/providenetwork/tendermint/types"
+	"github.com/providenetwork/tendermint/version"
 )
 
 //-----------------------------------------------------------------------------
