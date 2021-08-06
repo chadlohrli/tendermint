@@ -29,8 +29,8 @@ const (
 )
 
 var ABCIPubKeyTypesToNames = map[string]string{
-	ABCIPubKeyTypeEd25519:   ed25519.PubKeyName,
-	ABCIPubKeyTypeSecp256k1: secp256k1.PubKeyName,
+	ABCIPubKeyTypeEd25519:   ed25519.VaultedPublicKeyName,
+	ABCIPubKeyTypeSecp256k1: secp256k1.VaultedPublicKeyName,
 	ABCIPubKeyTypeSr25519:   sr25519.PubKeyName,
 }
 

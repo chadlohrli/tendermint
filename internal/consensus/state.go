@@ -283,6 +283,8 @@ func (cs *State) SetPrivValidator(priv types.PrivValidator) {
 			cs.privValidatorType = types.FileSignerClient
 		case *privval.SignerClient:
 			cs.privValidatorType = types.SignerSocketClient
+		case *privval.Validator:
+			cs.privValidatorType = types.VaultSignerClient
 		case *tmgrpc.SignerClient:
 			cs.privValidatorType = types.SignerGRPCClient
 		case types.MockPV:

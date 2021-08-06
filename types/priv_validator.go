@@ -21,6 +21,7 @@ const (
 	SignerSocketClient    = PrivValidatorType(0x03) // signer client via socket
 	ErrorMockSignerClient = PrivValidatorType(0x04) // error mock signer
 	SignerGRPCClient      = PrivValidatorType(0x05) // signer client via gRPC
+	VaultSignerClient     = PrivValidatorType(0x06) // signer client via Vault
 )
 
 // PrivValidator defines the functionality of a local Tendermint validator

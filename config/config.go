@@ -10,6 +10,7 @@ import (
 	"path/filepath"
 	"time"
 
+	uuid "github.com/kthomas/go.uuid"
 	tmjson "github.com/providenetwork/tendermint/libs/json"
 	"github.com/providenetwork/tendermint/libs/log"
 	tmos "github.com/providenetwork/tendermint/libs/os"
@@ -242,6 +243,10 @@ type BaseConfig struct { //nolint: maligned
 	// If true, query the ABCI app on connecting to a new peer
 	// so the app can decide if we should keep the connection or not
 	FilterPeers bool `mapstructure:"filter-peers"` // false
+
+	VaultID           string `mapstructure:"vault-id"`
+	VaultKeyID        string `mapstructure:"vault-key-id"`
+	VaultRefreshToken string `mapstructure:"-"`
 }
 
 // DefaultBaseConfig returns a default base configuration for a Tendermint node
@@ -313,7 +318,18 @@ func (cfg BaseConfig) LoadOrGenNodeKeyID() (types.NodeID, error) {
 		return nodeKey, nil
 	}
 
-	nodeKey := types.GenNodeKey()
+	var nodeKey types.NodeKey
+
+	if cfg.VaultRefreshToken != "" && cfg.VaultID != "" {
+		vaultID, err := uuid.FromString(cfg.VaultID)
+		if err != nil {
+			// FIXME... panic here?
+			return "", err
+		}
+		nodeKey = types.GenVaultedNodeKey(cfg.VaultRefreshToken, vaultID)
+	} else {
+		nodeKey = types.GenNodeKey()
+	}
 
 	if err := nodeKey.SaveAs(cfg.NodeKeyFile()); err != nil {
 		return "", err

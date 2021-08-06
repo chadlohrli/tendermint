@@ -7,8 +7,11 @@ import (
 	"fmt"
 	"io"
 
+	uuid "github.com/kthomas/go.uuid"
 	"github.com/oasisprotocol/curve25519-voi/primitives/ed25519"
 	"github.com/oasisprotocol/curve25519-voi/primitives/ed25519/extra/cache"
+	"github.com/provideplatform/provide-go/api/ident"
+	"github.com/provideplatform/provide-go/api/vault"
 
 	"github.com/providenetwork/tendermint/crypto"
 	"github.com/providenetwork/tendermint/crypto/tmhash"
@@ -122,6 +125,54 @@ func (privKey PrivKey) Type() string {
 // in tendermint/libs/common to generate the private key.
 func GenPrivKey() PrivKey {
 	return genPrivKey(crypto.CReader())
+}
+
+// GenVaultedPrivKey generates a new ed25519 private key using the configured vault
+func GenVaultedPrivKey(vaultRefreshToken string, vaultID uuid.UUID) *VaultedPrivateKey {
+	token, err := ident.CreateToken(vaultRefreshToken, map[string]interface{}{
+		"grant_type": "refresh_token",
+	})
+	if err != nil {
+		return nil
+	}
+
+	resp, err := vault.CreateKey(*token.AccessToken, vaultID.String(), map[string]interface{}{
+		"name":        "tendermint ed25519 key",
+		"description": "generated ed25519 key",
+		"spec":        "ed25519",
+		"type":        "asymmetric",
+		"usage":       "sign/verify",
+	})
+	if err != nil {
+		return nil
+	}
+
+	return &VaultedPrivateKey{
+		VaultID:           vaultID,
+		VaultKeyID:        resp.ID,
+		VaultRefreshToken: vaultRefreshToken,
+	}
+}
+
+// LoadVaultedPrivKey fetches an existing ed25519 private key using the configured vault and vault key id
+func LoadVaultedPrivKey(vaultRefreshToken string, vaultID, vaultKeyID uuid.UUID) *VaultedPrivateKey {
+	token, err := ident.CreateToken(vaultRefreshToken, map[string]interface{}{
+		"grant_type": "refresh_token",
+	})
+	if err != nil {
+		return nil
+	}
+
+	resp, err := vault.FetchKey(*token.AccessToken, vaultID.String(), vaultKeyID.String())
+	if err != nil {
+		return nil
+	}
+
+	return &VaultedPrivateKey{
+		VaultID:           vaultID,
+		VaultKeyID:        resp.ID,
+		VaultRefreshToken: vaultRefreshToken,
+	}
 }
 
 // genPrivKey generates a new ed25519 private key using the provided reader.

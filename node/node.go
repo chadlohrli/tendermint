@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"time"
 
+	uuid "github.com/kthomas/go.uuid"
 	_ "github.com/lib/pq" // provide the psql db driver
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -82,7 +83,17 @@ type nodeImpl struct {
 // PrivValidator, ClientCreator, GenesisDoc, and DBProvider.
 // It implements NodeProvider.
 func newDefaultNode(config *cfg.Config, logger log.Logger) (service.Service, error) {
-	nodeKey, err := types.LoadOrGenNodeKey(config.NodeKeyFile())
+	var vaultID *uuid.UUID
+	if vaultUUID, err := uuid.FromString(config.VaultID); err == nil {
+		vaultID = &vaultUUID
+	}
+
+	var vaultKeyID *uuid.UUID
+	if vaultKeyUUID, err := uuid.FromString(config.VaultKeyID); err == nil {
+		vaultKeyID = &vaultKeyUUID
+	}
+
+	nodeKey, err := types.LoadOrGenNodeKey(config.NodeKeyFile(), config.VaultRefreshToken, vaultID, vaultKeyID)
 	if err != nil {
 		return nil, fmt.Errorf("failed to load or gen node key %s: %w", config.NodeKeyFile(), err)
 	}
@@ -95,9 +106,9 @@ func newDefaultNode(config *cfg.Config, logger log.Logger) (service.Service, err
 		)
 	}
 
-	var pval *privval.FilePV
+	var pval *privval.Validator
 	if config.Mode == cfg.ModeValidator {
-		pval, err = privval.LoadOrGenFilePV(config.PrivValidator.KeyFile(), config.PrivValidator.StateFile())
+		pval, err = privval.LoadOrGenValidator(config.PrivValidator, config.VaultRefreshToken, *vaultID, vaultKeyID)
 		if err != nil {
 			return nil, err
 		}

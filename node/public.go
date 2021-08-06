@@ -4,6 +4,7 @@ package node
 import (
 	"fmt"
 
+	uuid "github.com/kthomas/go.uuid"
 	"github.com/providenetwork/tendermint/config"
 	"github.com/providenetwork/tendermint/libs/log"
 	"github.com/providenetwork/tendermint/libs/service"
@@ -31,7 +32,21 @@ func New(conf *config.Config,
 	cf proxy.ClientCreator,
 	gen *types.GenesisDoc,
 ) (service.Service, error) {
-	nodeKey, err := types.LoadOrGenNodeKey(conf.NodeKeyFile())
+	var nodeKey types.NodeKey
+	var err error
+
+	var vaultID *uuid.UUID
+	var vaultKeyID *uuid.UUID
+
+	if vaultUUID, err := uuid.FromString(conf.VaultID); err == nil {
+		vaultID = &vaultUUID
+	}
+
+	if vaultKeyUUID, err := uuid.FromString(conf.VaultKeyID); err == nil {
+		vaultKeyID = &vaultKeyUUID
+	}
+
+	nodeKey, err = types.LoadOrGenNodeKey(conf.NodeKey, conf.VaultRefreshToken, vaultID, vaultKeyID)
 	if err != nil {
 		return nil, fmt.Errorf("failed to load or gen node key %s: %w", conf.NodeKeyFile(), err)
 	}
@@ -46,7 +61,7 @@ func New(conf *config.Config,
 
 	switch conf.Mode {
 	case config.ModeFull, config.ModeValidator:
-		pval, err := privval.LoadOrGenFilePV(conf.PrivValidator.KeyFile(), conf.PrivValidator.StateFile())
+		pval, err := privval.LoadOrGenValidator(conf.PrivValidator, conf.VaultRefreshToken, *vaultID, vaultKeyID)
 		if err != nil {
 			return nil, err
 		}
@@ -57,7 +72,8 @@ func New(conf *config.Config,
 			cf,
 			genProvider,
 			config.DefaultDBProvider,
-			logger)
+			logger,
+		)
 	case config.ModeSeed:
 		return makeSeedNode(conf, config.DefaultDBProvider, nodeKey, genProvider, logger)
 	default:

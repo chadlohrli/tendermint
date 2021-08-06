@@ -27,10 +27,22 @@ func PubKeyToProto(k crypto.PubKey) (pc.PublicKey, error) {
 				Ed25519: k,
 			},
 		}
+	case *ed25519.VaultedPublicKey:
+		kp = pc.PublicKey{
+			Sum: &pc.PublicKey_Ed25519{
+				Ed25519: k.Bytes(),
+			},
+		}
 	case secp256k1.PubKey:
 		kp = pc.PublicKey{
 			Sum: &pc.PublicKey_Secp256K1{
 				Secp256K1: k,
+			},
+		}
+	case *secp256k1.VaultedPublicKey:
+		kp = pc.PublicKey{
+			Sum: &pc.PublicKey_Secp256K1{
+				Secp256K1: k.Bytes(),
 			},
 		}
 	case sr25519.PubKey:
