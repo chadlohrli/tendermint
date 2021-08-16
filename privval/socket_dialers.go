@@ -5,9 +5,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	p2pconn "github.com/tendermint/tendermint/p2p/conn"
+	"github.com/providenetwork/tendermint/crypto"
+	tmnet "github.com/providenetwork/tendermint/libs/net"
+	p2pconn "github.com/providenetwork/tendermint/p2p/conn"
 )
 
 // Socket errors.

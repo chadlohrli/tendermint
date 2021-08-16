@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/types"
+	"github.com/providenetwork/tendermint/light/provider"
+	"github.com/providenetwork/tendermint/types"
 )
 
 var errNoResp = errors.New("no response from provider")

@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"time"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/libs/log"
-	mempl "github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/state/indexer"
-	"github.com/tendermint/tendermint/state/txindex"
-	"github.com/tendermint/tendermint/types"
+	cfg "github.com/providenetwork/tendermint/config"
+	"github.com/providenetwork/tendermint/consensus"
+	"github.com/providenetwork/tendermint/crypto"
+	"github.com/providenetwork/tendermint/libs/log"
+	mempl "github.com/providenetwork/tendermint/mempool"
+	"github.com/providenetwork/tendermint/p2p"
+	"github.com/providenetwork/tendermint/proxy"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/state/indexer"
+	"github.com/providenetwork/tendermint/state/txindex"
+	"github.com/providenetwork/tendermint/types"
 )
 
 const (

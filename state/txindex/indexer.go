@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
+	abci "github.com/providenetwork/tendermint/abci/types"
+	"github.com/providenetwork/tendermint/libs/pubsub/query"
 )
 
 // XXX/TODO: These types should be moved to the indexer package.

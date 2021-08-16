@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmos "github.com/tendermint/tendermint/libs/os"
+	"github.com/providenetwork/tendermint/crypto"
+	"github.com/providenetwork/tendermint/crypto/ed25519"
+	tmjson "github.com/providenetwork/tendermint/libs/json"
+	tmos "github.com/providenetwork/tendermint/libs/os"
 )
 
 // ID is a hex-encoded crypto.Address

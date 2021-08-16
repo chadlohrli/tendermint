@@ -6,19 +6,20 @@ package types
 import (
 	context "context"
 	fmt "fmt"
-	_ "github.com/gogo/protobuf/gogoproto"
-	proto "github.com/gogo/protobuf/proto"
-	_ "github.com/gogo/protobuf/types"
-	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
-	crypto "github.com/tendermint/tendermint/proto/tendermint/crypto"
-	types1 "github.com/tendermint/tendermint/proto/tendermint/types"
-	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
 	io "io"
 	math "math"
 	math_bits "math/bits"
 	time "time"
+
+	_ "github.com/gogo/protobuf/gogoproto"
+	proto "github.com/gogo/protobuf/proto"
+	_ "github.com/gogo/protobuf/types"
+	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
+	crypto "github.com/providenetwork/tendermint/proto/tendermint/crypto"
+	types1 "github.com/providenetwork/tendermint/proto/tendermint/types"
+	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status "google.golang.org/grpc/status"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -2997,7 +2998,7 @@ type Evidence struct {
 	Time time.Time `protobuf:"bytes,4,opt,name=time,proto3,stdtime" json:"time"`
 	// Total voting power of the validator set in case the ABCI application does
 	// not store historical validators.
-	// https://github.com/tendermint/tendermint/issues/4581
+	// https://github.com/providenetwork/tendermint/issues/4581
 	TotalVotingPower int64 `protobuf:"varint,5,opt,name=total_voting_power,json=totalVotingPower,proto3" json:"total_voting_power,omitempty"`
 }
 

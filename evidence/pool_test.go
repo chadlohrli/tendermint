@@ -11,16 +11,16 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/evidence"
-	"github.com/tendermint/tendermint/evidence/mocks"
-	"github.com/tendermint/tendermint/libs/log"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	sm "github.com/tendermint/tendermint/state"
-	smmocks "github.com/tendermint/tendermint/state/mocks"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/providenetwork/tendermint/evidence"
+	"github.com/providenetwork/tendermint/evidence/mocks"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	tmversion "github.com/providenetwork/tendermint/proto/tendermint/version"
+	sm "github.com/providenetwork/tendermint/state"
+	smmocks "github.com/providenetwork/tendermint/state/mocks"
+	"github.com/providenetwork/tendermint/store"
+	"github.com/providenetwork/tendermint/types"
+	"github.com/providenetwork/tendermint/version"
 )
 
 func TestMain(m *testing.M) {

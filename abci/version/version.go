@@ -1,7 +1,7 @@
 package version
 
 import (
-	"github.com/tendermint/tendermint/version"
+	"github.com/providenetwork/tendermint/version"
 )
 
 // TODO: eliminate this after some version refactor

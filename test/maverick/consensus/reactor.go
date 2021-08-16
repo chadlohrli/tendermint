@@ -9,19 +9,19 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	tmcon "github.com/tendermint/tendermint/consensus"
-	cstypes "github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/libs/bits"
-	tmevents "github.com/tendermint/tendermint/libs/events"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/p2p"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	tmcon "github.com/providenetwork/tendermint/consensus"
+	cstypes "github.com/providenetwork/tendermint/consensus/types"
+	"github.com/providenetwork/tendermint/libs/bits"
+	tmevents "github.com/providenetwork/tendermint/libs/events"
+	tmjson "github.com/providenetwork/tendermint/libs/json"
+	"github.com/providenetwork/tendermint/libs/log"
+	tmsync "github.com/providenetwork/tendermint/libs/sync"
+	"github.com/providenetwork/tendermint/p2p"
+	tmcons "github.com/providenetwork/tendermint/proto/tendermint/consensus"
+	tmproto "github.com/providenetwork/tendermint/proto/tendermint/types"
+	sm "github.com/providenetwork/tendermint/state"
+	"github.com/providenetwork/tendermint/types"
+	tmtime "github.com/providenetwork/tendermint/types/time"
 )
 
 const (
