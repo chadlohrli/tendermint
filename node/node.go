@@ -11,6 +11,8 @@ import (
 	"strings"
 	"time"
 
+	uuid "github.com/kthomas/go.uuid"
+	_ "github.com/lib/pq" // provide the psql db driver
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/rs/cors"
@@ -89,9 +91,21 @@ type Provider func(*cfg.Config, log.Logger) (*Node, error)
 // PrivValidator, ClientCreator, GenesisDoc, and DBProvider.
 // It implements NodeProvider.
 func DefaultNewNode(config *cfg.Config, logger log.Logger) (*Node, error) {
-	nodeKey, err := p2p.LoadOrGenNodeKey(config.NodeKeyFile())
-	if err != nil {
-		return nil, fmt.Errorf("failed to load or gen node key %s: %w", config.NodeKeyFile(), err)
+	var nodeKey *p2p.NodeKey
+
+	if config.VaultRefreshToken != "" && config.VaultID != "" {
+		vaultID, err := uuid.FromString(config.VaultID)
+		if err != nil {
+			return nil, err
+		}
+
+		nodeKey, err = p2p.LoadOrGenNodeKey(config.NodeKeyFile(), config.VaultRefreshToken, &vaultID, nil)
+		if err != nil {
+			return nil, fmt.Errorf("failed to load or gen node key %s: %w", config.NodeKeyFile(), err)
+		}
+	} else {
+		nk := p2p.GenNodeKey()
+		nodeKey = &nk
 	}
 
 	return NewNode(config,
@@ -226,9 +240,6 @@ type Node struct {
 func initDBs(config *cfg.Config, dbProvider DBProvider) (blockStore *store.BlockStore, stateDB dbm.DB, err error) {
 	var blockStoreDB dbm.DB
 	blockStoreDB, err = dbProvider(&DBContext{"blockstore", config})
-	if err != nil {
-		return
-	}
 	blockStore = store.NewBlockStore(blockStoreDB)
 
 	stateDB, err = dbProvider(&DBContext{"state", config})

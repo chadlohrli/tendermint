@@ -194,6 +194,9 @@ type BaseConfig struct { //nolint: maligned
 	// Output format: 'plain' (colored text) or 'json'
 	LogFormat string `mapstructure:"log_format"`
 
+	// Mode is convenience method to determine if running a validator, full or seed node
+	Mode string `mapstructure:"mode"`
+
 	// Path to the JSON file containing the initial validator set and other meta data
 	Genesis string `mapstructure:"genesis_file"`
 
@@ -215,7 +218,11 @@ type BaseConfig struct { //nolint: maligned
 
 	// If true, query the ABCI app on connecting to a new peer
 	// so the app can decide if we should keep the connection or not
-	FilterPeers bool `mapstructure:"filter_peers"` // false
+	FilterPeers bool `mapstructure:"filter-peers"` // false
+
+	VaultID           string `mapstructure:"vault-id"`
+	VaultKeyID        string `mapstructure:"vault-key-id"`
+	VaultRefreshToken string `mapstructure:"-"`
 }
 
 // DefaultBaseConfig returns a default base configuration for a Tendermint node

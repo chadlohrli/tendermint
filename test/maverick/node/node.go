@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+	uuid "github.com/kthomas/go.uuid"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/rs/cors"
@@ -122,7 +123,18 @@ type Provider func(*cfg.Config, log.Logger) (*Node, error)
 // PrivValidator, ClientCreator, GenesisDoc, and DBProvider.
 // It implements NodeProvider.
 func DefaultNewNode(config *cfg.Config, logger log.Logger, misbehaviors map[int64]cs.Misbehavior) (*Node, error) {
-	nodeKey, err := p2p.LoadOrGenNodeKey(config.NodeKeyFile())
+	var vaultID *uuid.UUID
+	var vaultKeyID *uuid.UUID
+
+	if vaultUUID, err := uuid.FromString(config.VaultID); err == nil {
+		vaultID = &vaultUUID
+	}
+
+	if vaultKeyUUID, err := uuid.FromString(config.VaultKeyID); err == nil {
+		vaultKeyID = &vaultKeyUUID
+	}
+
+	nodeKey, err := p2p.LoadOrGenNodeKey(config.NodeKeyFile(), config.VaultRefreshToken, vaultID, vaultKeyID)
 	if err != nil {
 		return nil, fmt.Errorf("failed to load or gen node key %s, err: %w", config.NodeKeyFile(), err)
 	}
@@ -137,7 +149,6 @@ func DefaultNewNode(config *cfg.Config, logger log.Logger, misbehaviors map[int6
 		logger,
 		misbehaviors,
 	)
-
 }
 
 // MetricsProvider returns a consensus, p2p and mempool Metrics.

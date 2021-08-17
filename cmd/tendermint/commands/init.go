@@ -3,6 +3,7 @@ package commands
 import (
 	"fmt"
 
+	uuid "github.com/kthomas/go.uuid"
 	"github.com/spf13/cobra"
 
 	cfg "github.com/providenetwork/tendermint/config"
@@ -45,7 +46,17 @@ func initFilesWithConfig(config *cfg.Config) error {
 	if tmos.FileExists(nodeKeyFile) {
 		logger.Info("Found node key", "path", nodeKeyFile)
 	} else {
-		if _, err := p2p.LoadOrGenNodeKey(nodeKeyFile); err != nil {
+		var vaultID *uuid.UUID
+		if vaultUUID, err := uuid.FromString(config.VaultID); err == nil {
+			vaultID = &vaultUUID
+		}
+
+		var vaultKeyID *uuid.UUID
+		if vaultKeyUUID, err := uuid.FromString(config.VaultKeyID); err == nil {
+			vaultKeyID = &vaultKeyUUID
+		}
+
+		if _, err := p2p.LoadOrGenNodeKey(nodeKeyFile, config.VaultRefreshToken, vaultID, vaultKeyID); err != nil {
 			return err
 		}
 		logger.Info("Generated node key", "path", nodeKeyFile)

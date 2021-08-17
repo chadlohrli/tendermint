@@ -11,6 +11,7 @@ import (
 	"strings"
 	"time"
 
+	uuid "github.com/kthomas/go.uuid"
 	"github.com/spf13/viper"
 
 	"github.com/providenetwork/tendermint/abci/server"
@@ -302,7 +303,17 @@ func setupNode() (*config.Config, log.Logger, *p2p.NodeKey, error) {
 
 	nodeLogger = nodeLogger.With("module", "main")
 
-	nodeKey, err := p2p.LoadOrGenNodeKey(tmcfg.NodeKeyFile())
+	var vaultID *uuid.UUID
+	if vaultUUID, err := uuid.FromString(tmcfg.VaultID); err == nil {
+		vaultID = &vaultUUID
+	}
+
+	var vaultKeyID *uuid.UUID
+	if vaultKeyUUID, err := uuid.FromString(tmcfg.VaultKeyID); err == nil {
+		vaultKeyID = &vaultKeyUUID
+	}
+
+	nodeKey, err := p2p.LoadOrGenNodeKey(tmcfg.NodeKeyFile(), tmcfg.VaultRefreshToken, vaultID, vaultKeyID)
 	if err != nil {
 		return nil, nil, nil, fmt.Errorf("failed to load or gen node key %s: %w", tmcfg.NodeKeyFile(), err)
 	}

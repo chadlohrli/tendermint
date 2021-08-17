@@ -8,6 +8,7 @@ import (
 	"strings"
 	"time"
 
+	uuid "github.com/kthomas/go.uuid"
 	abci "github.com/providenetwork/tendermint/abci/types"
 	"github.com/providenetwork/tendermint/libs/log"
 
@@ -163,7 +164,18 @@ func NewTendermint(app abci.Application, opts *Options) *nm.Node {
 	pvKeyStateFile := config.PrivValidatorStateFile()
 	pv := privval.LoadOrGenFilePV(pvKeyFile, pvKeyStateFile)
 	papp := proxy.NewLocalClientCreator(app)
-	nodeKey, err := p2p.LoadOrGenNodeKey(config.NodeKeyFile())
+
+	var vaultID *uuid.UUID
+	if vaultUUID, err := uuid.FromString(config.VaultID); err == nil {
+		vaultID = &vaultUUID
+	}
+
+	var vaultKeyID *uuid.UUID
+	if vaultKeyUUID, err := uuid.FromString(config.VaultKeyID); err == nil {
+		vaultKeyID = &vaultKeyUUID
+	}
+
+	nodeKey, err := p2p.LoadOrGenNodeKey(config.NodeKeyFile(), config.VaultRefreshToken, vaultID, vaultKeyID)
 	if err != nil {
 		panic(err)
 	}
