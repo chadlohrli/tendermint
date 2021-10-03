@@ -337,6 +337,9 @@ type Header struct {
 	Height  int64             `json:"height"`
 	Time    time.Time         `json:"time"`
 
+	// entropy
+	Entropy int64			`json:"entropy"`
+
 	// prev block info
 	LastBlockID BlockID `json:"last_block_id"`
 
@@ -469,6 +472,7 @@ func (h *Header) Hash() tmbytes.HexBytes {
 		hbz,
 		cdcEncode(h.ChainID),
 		cdcEncode(h.Height),
+		cdcEncode(h.Entropy),
 		pbt,
 		bzbi,
 		cdcEncode(h.LastCommitHash),
